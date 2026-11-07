@@ -9,67 +9,60 @@ body {
      font-family: Arial, sans-serif;
 }
 
-main {
+.voice-chat {
      min-height: 100vh;
      display: flex;
+     flex-direction: column;
      justify-content: center;
      align-items: center;
+     gap: 25px;
 }
 
-.voice-container {
-     width: 90%;
-     max-width: 450px;
-     padding: 35px;
-     text-align: center;
-     background: #1c1d22;
-     border-radius: 20px;
-}
-
-.voice-visualizer {
-     height: 100px;
+.status {
      display: flex;
-     justify-content: center;
      align-items: center;
-     gap: 5px;
-     margin: 25px 0;
+     gap: 10px;
+     color: #aaa;
 }
 
-.voice-bar {
-     width: 5px;
-     border-radius: 10px;
-     background: #555;
-     transition: height 100ms ease;
+.status-dot {
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background: #777;
 }
 
-.voice-bar.active {
+.status-dot.online {
      background: #00d6a0;
 }
 
+.microphone {
+     width: 140px;
+     height: 140px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #20252b;
+     font-size: 55px;
+     border: 2px solid #00d6a0;
+}
+
+.controls {
+     display: flex;
+     gap: 15px;
+}
+
 button {
-     padding: 13px 25px;
+     padding: 14px 24px;
      border: none;
      border-radius: 30px;
+     background: #087f60;
      color: white;
      cursor: pointer;
-     font-size: 15px;
 }
 
-.start-button {
-     background: #087f60;
-}
-
-.stop-button {
-     background: #dc3545;
-}
-
-.error {
-     color: #ff7777;
-}
-
-.audio-preview {
-     margin-top: 25px;
-}
-
-audio {
-     width: 100%;
+button:disabled {
+     opacity: 0.4;
+     cursor: not-allowed;
 }
